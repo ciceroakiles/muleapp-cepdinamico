@@ -1,0 +1,19 @@
+#%RAML 1.0
+title: API First
+mediaType: application/json
+protocols:
+    - HTTP
+baseUri: http://localhost:8081/api/v1
+version: ${api.version}
+
+/ruas:
+  /{cep}:
+    get:
+      description: "Retornar logradouro"
+      responses:
+        200:
+          body:
+            application/json:
+              example: {
+                "logradouro": "Rua Augusta"
+              }
